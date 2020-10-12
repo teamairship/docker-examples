@@ -5,7 +5,11 @@ Follow these steps to start the php server:
 ```
 cd /path/to/example-php-apache
 docker build -t example-php-apache-img .
-docker run -p 8000:80 -v $(pwd)/src:/var/www/html --name example-php-apache-container example-php-apache-img
+docker run \
+  -p 8000:80 \
+  -v $(pwd)/src:/var/www/html \
+  --name example-php-apache-container \
+  example-php-apache-img
 ```
 
 Open up the following url in your browser:

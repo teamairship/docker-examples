@@ -2,8 +2,11 @@ version: "3"
 
 services:
   webapp:
+    # each service must specify a build dir - normally each service would live in a subdirectory
     build: .
+    # very similar to the `-v` flag in the `docker run` cmd, except path relative to the docker-compose file is allowable
     volumes:
       - ./src:/var/www/html
+    # any needed port mapping can be added below - supports any number of port bindings
     ports:
       - "8000:80"
