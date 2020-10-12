@@ -1,5 +1,10 @@
 # Docker - simple PHP server
 
+Based heavily off of these tutorials:
+
+- [Learn Docker in 12 Minutes 🐳](https://www.youtube.com/watch?v=YFl2mCHdv24)
+- [Docker Compose in 12 Minutes](https://www.youtube.com/watch?v=Qw9zlE3t8Ko)
+
 Follow these steps to start the php server:
 
 ```
