@@ -39,3 +39,11 @@ All of the above can steps can be simplified into a single cmd that utilizes doc
 cd /path/to/example-php-apache
 docker-compose up
 ```
+
+## File changes during development
+
+Normally, a docker image would need to be re-built in order for any changes to show up. Obviously this is not ideal for a local development environment.
+
+The volume configuration specified above in the `docker run -v` command and in `docker-compose.yml` basically allow for the local machine and the docker container to share the same source files.
+
+**NOTE** - if any changes added after the initial build, then `docker build` will need to be run again before deploying to a remote. Otherwise, the changes will not show up.
