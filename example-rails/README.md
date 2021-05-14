@@ -8,4 +8,4 @@
     - `docker compose run web rails db:create`
     - `docker compose run web rails db:migrate`
     
-- If changes are made to `Gemfile`, `Dockerfile`, or `docker-compose.yml`, then run `docker compose build` to pull in those changes
+- If changes are made to `Gemfile`, `Dockerfile`, `package.json`, or `docker-compose.yml`, then run `docker compose build` to pull in those changes
