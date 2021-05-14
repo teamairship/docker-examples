@@ -1,6 +1,7 @@
 # docker-examples
 
 - [Simple PHP Apache Server](./example-php-apache)
+- [Basic Rails Project](./example-rails)
 
 ## To Do
 
