@@ -1,18 +1,26 @@
 services:
+  # database service
   db:
+    # build from base Postgres image on Docker Hub
     image: postgres
+    # pass environment variables in an external file
     env_file:
       - .env-vars
-#    volumes:
-#      - ./tmp/db:/var/lib/postgresql/data
+  # web app service
   web:
+    # build from Dockerfile in current directory
     build: .
+    # command to execute when running service - deletes stale pid file if exists and starts puma server through config file
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec puma -C config/puma.rb"
+    # maps current directory into '/app' inside service
     volumes:
       - .:/app
+    # maps machine port 3000 to docker service port 3000
     ports:
       - "3000:3000"
+    # pass environment variables in an external file
     env_file:
       - .env-vars
+    # when running web service docker compose will automatically rn db service and wait on it to come up
     depends_on:
       - db
