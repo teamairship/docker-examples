@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  pool: 5
+
+development:
+  <<: *default
+  database: docker_compose_rails_development
+
+test:
+  <<: *default
+  database: docker_compose_rails_test

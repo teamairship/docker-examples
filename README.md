@@ -8,7 +8,6 @@
 - Add node.js Express / PostgreSQL example
 - Add React (CRA) example
 - Add React (Next.js) example
-- Add Rails example
 
 ## Resources
 
