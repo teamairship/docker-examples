@@ -1,6 +1,7 @@
 # docker-examples
 
 - [Simple PHP Apache Server](./example-php-apache)
+- [Basic Rails Project](./example-rails)
 
 ## To Do
 
@@ -8,7 +9,6 @@
 - Add node.js Express / PostgreSQL example
 - Add React (CRA) example
 - Add React (Next.js) example
-- Add Rails example
 
 ## Resources
 
